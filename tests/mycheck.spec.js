@@ -13,7 +13,12 @@ test('Test New Demo', async ({ page }) => {
 });
 
 test('This is my second Test @smoke', async ({ page }) => {
+  await page.goto('https://www.saucedemo.com/');
+  await expect(page.getByText('Swag Labs')).toBeVisible();
+})
 
+
+test('This is my second Test', async ({ page }) => {
   await page.goto('https://www.saucedemo.com/');
   await expect(page.getByText('Swag Labs')).toBeVisible();
 })
